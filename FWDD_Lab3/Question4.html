@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4 | Lab Exercise 3</title>
+</head>
+<style>
+    #stage{
+        margin: 20px;
+        width: 125px;
+        height: 125px;
+        background: #333;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 10px;
+        overflow: hidden;
+    }
+
+    #ball{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: yellow;
+        left: 0px;
+        top: 0px;
+    }
+
+    #stage:hover .bounce{
+        animation-name: bounce-anim;
+        animation-duration: 150ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes bounce-anim{
+        0%, 100% {
+            transform: translate(0, 0);
+        }
+
+        50%{
+            transform: translate(25px, 25px);
+        }
+    }
+
+    /* More CSS Bounce Animations Here: https://codepen.io/nelledejones/pen/gOOPWrK */
+
+</style>
+<body>
+    <div id="stage">
+        <div id="ball" class="bounce">
+        </div>
+    </div>
+</body>
+</html>
