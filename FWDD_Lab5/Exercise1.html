@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia & Geolocation | FWDD Lab 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <main>
+      <video id="Vid" autoplay>
+        <source src="LAB 4_video.mp4" type="video/mp4" />
+      </video>
+    </main>
+    <div class="custom-vidcontrols">
+      <button onclick="playPause()">Play/Pause</button>
+      <button onclick="wide()">Wide Screen</button>
+      <button onclick="mute()">Mute</button>
+      <button onclick="unmute()">Unmute</button>
+      <button onclick="replay()">Loop</button>
+      <button onclick="noLoop()">Stop Loop</button>
+    </div>
+
+    <script>
+      var movie = document.getElementById("Vid");
+
+      function playPause() {
+        if (movie.paused) movie.play();
+        else movie.pause();
+      }
+
+      function wide() {
+        movie.width = 600;
+      }
+
+      function mute() {
+        movie.muted = true;
+      }
+
+      function unmute() {
+        movie.muted = false;
+      }
+
+      function replay() {
+        movie.loop = true;
+      }
+
+      function noLoop() {
+        movie.loop = false;
+      }
+
+      function narrow() {
+        movie.width = 340;
+      }
+    </script>
+  </body>
+</html>
